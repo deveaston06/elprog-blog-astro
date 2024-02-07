@@ -1,0 +1,38 @@
+---
+import { supabase } from 'src/lib/supabase';
+
+type Props = {
+  slug: string;
+}
+
+const accessToken = Astro.cookies.get("sb-access-token");
+const refreshToken = Astro.cookies.get("sb-refresh-token");
+
+let userEmail = null;
+
+if (accessToken && refreshToken) {
+  const { data, error } = await supabase.auth.setSession({
+    refresh_token: refreshToken.value,
+    access_token: accessToken.value,
+  });
+  
+  if (data.user) userEmail = data.user.email
+} 
+
+const { slug } = Astro.props;
+
+---
+
+<div class="w-full p-4 ">
+  <p>Here's the Comment Section to {slug}</p>
+  { !userEmail && <p>Here's the <a href="/signin">Link</a> to Sign in</p> }
+  {  
+    !!userEmail && 
+    <div>
+      {userEmail} is Logged In. 
+      <form action="/api/auth/signout" method="get"> 
+        Log out <button type="submit"><a>Here</a></button>
+      </form>
+    </div>
+  }
+</div>

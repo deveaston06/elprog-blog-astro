@@ -5,6 +5,7 @@ import Renderer from "../../components/Renderer.astro";
 import BlogPostMeta from "../../components/BlogPostMeta.astro";
 import ContentLayout from "../../layouts/ContentLayout.astro";
 import { SITE_URL } from "../../config";
+import CommentSection from "src/components/CommentSection.astro";
 
 export async function getStaticPaths() {
   const posts = await readAll({
@@ -49,4 +50,5 @@ const ogImageAbsoluteUrl =
     slot="meta"
   />
   <Renderer content={content} slot="content" />
+  <CommentSection slug={slug} slot="comment" />
 </ContentLayout>
