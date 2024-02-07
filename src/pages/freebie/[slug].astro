@@ -7,6 +7,8 @@ import ContentLayout from "../../layouts/ContentLayout.astro";
 import { SITE_URL } from "../../config";
 import CommentSection from "src/components/CommentSection.astro";
 
+export const prerender = true
+
 export async function getStaticPaths() {
   const posts = await readAll({
     directory: "freebies",
