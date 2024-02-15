@@ -8,6 +8,7 @@ import GitHubGistEmbed from "./GitHubGistEmbed.astro";
 import CodeBlock from "./CodeBlock.astro";
 import Heading from "./Heading.astro";
 import Image from "./Image.astro";
+import CommentSection from "./CommentSection.astro";
 
 type Props = {
   content: Content;
@@ -42,6 +43,10 @@ const components = {
   },
   Image: {
     Component: Image,
+    props: {},
+  },
+  CommentSection: {
+    Component: CommentSection,
     props: {},
   }
 };

@@ -1,5 +1,6 @@
 ---
 external: false
+draft: true
 title: Slipping Into Psychosis
 description: What is it like to have Schizophrenia
 date: 2024-02-01

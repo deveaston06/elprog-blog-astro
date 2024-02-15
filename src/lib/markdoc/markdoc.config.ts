@@ -115,6 +115,13 @@ export const config: Config = {
 			},
 			selfClosing: true,
 		},
+		comments: {
+			render: "CommentSection",
+			attributes: {
+				id: { type: Number, required: true },
+			},
+			selfClosing: true,
+		},
 	},
 	nodes: {
 		heading: {
