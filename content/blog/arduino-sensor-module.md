@@ -40,5 +40,3 @@ date: 2023-12-06
 ## Others
 
 - [**Single Channel 5V Relay Board**](https://my.cytron.io/p-single-channel-5v-relay-breakout-board?r=1&gad_source=1&gclid=CjwKCAiAvdCrBhBREiwAX6-6Ui2NgeRTtsKsr6J0WKQa1F7Q51QKxcnRRP1TfoD4Svjtxuwu0nj52xoCdvIQAvD_BwE)
-
-{% comments id=0 /%}

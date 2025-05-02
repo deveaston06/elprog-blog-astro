@@ -21,6 +21,23 @@
 </mode-toggle>
 
 <script>
+  function updateGiscusTheme(theme: string) {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+
+    //@ts-ignore
+    iframe.contentWindow.postMessage(
+      {
+        giscus: {
+          setConfig: {
+            theme: theme,
+          },
+        },
+      },
+      'https://giscus.app'
+    );
+  }
+
   function updateHTMLTheme(mode: "light" | "dark") {
     const themeColorMetaTag = document.head.querySelector(
       'meta[name="theme-color"]'
@@ -77,6 +94,7 @@
             iconElem.classList.add("light");
             updateHTMLTheme(modeToSwitch);
             updateStorageTheme(modeToSwitch);
+            updateGiscusTheme(modeToSwitch);
             currentMode = modeToSwitch;
           } else {
             const modeToSwitch = "dark";
@@ -84,6 +102,7 @@
             iconElem.classList.add("dark");
             updateHTMLTheme(modeToSwitch);
             updateStorageTheme(modeToSwitch);
+            updateGiscusTheme(modeToSwitch);
             currentMode = modeToSwitch;
           }
 
