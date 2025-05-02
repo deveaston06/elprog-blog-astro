@@ -51,7 +51,7 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
         <h1 class="m-0 mb-[0.25em]">{title}</h1>
         <time class="block mb-[2em] text-text-muted">{formattedDate}</time>
         <slot name="content" /> 
-        <slot name="comment" />
+        <BlogComment></BlogComment>
       </section>
     </main>
     <Footer />
@@ -69,6 +69,5 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
         grid-area: main;
       }
     </style>
-    <BlogComment></BlogComment>
   </body>
 </html>
