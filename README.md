@@ -6,4 +6,4 @@ I used [Blogster Sleek Template](https://github.com/flexdinesh/blogster?tab=read
 
 ## Deploy
 
-I used vercel to deploy this blog
+I used [Vercel](https://vercel.com) to deploy this blog
