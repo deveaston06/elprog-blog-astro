@@ -2,7 +2,7 @@
 external: false
 draft: true
 title: My Next Billion Ringgit Idea App
-description: My new billion ringgit idea for my university capstone project
+description: Introducing my next billion ringgit idea for my capstone project
 date: 2025-07-16
 ---
 
@@ -16,4 +16,10 @@ This will be the shape of my **IOT node** controlled by a [ESP32](https://my.cyt
 
 {% image src="/posts/my-next-billion-idea-app/iot-node-back.png" width="750" height="500" alt="My IOT Node's Back" /%}
 
+## What I started with
 
+First, I begin by figuring out how to integrate everything together, the main components of my project are:
+
+1. **MakeID L1 Label Printer** - This printer is using Bluetooth Low Energy and connects with their proprietary mobile app to print using thermal paper (no ink)
+
+{% image src="https://the-gadgeteer.com/wp-content/uploads/2022/04/makeid-l1-1.jpg" width="750" height="500" alt="MakeID L1 Label Printer" /%}
