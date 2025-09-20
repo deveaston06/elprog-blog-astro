@@ -1,3 +1,0 @@
-overrides:
-  brace-expansion@>=2.0.0 <=2.0.1: '>=2.0.2'
-  devalue@<5.3.2: '>=5.3.2'
